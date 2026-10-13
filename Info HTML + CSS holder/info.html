@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+  <title>Neuromuscular Disease Explorer</title>
+  <link rel="stylesheet" href="info.css">
+</head>
+
+<body>
+
+<div class="disclaimer">
+  <p><strong>Disclaimer:</strong> This website is intended for educational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+</div>
+
+<div class="top">
+  <div class="back-button">
+    <a href="../index.html" aria-label="Back to disease list"><i class="fas fa-arrow-left" aria-hidden="true"></i></a>
+  </div>
+  <div class="header">
+    <h1 id="disease-title">Loading...</h1>
+    <p class="global-cases" id="global-cases" hidden>
+      <i class="fas fa-users" aria-hidden="true"></i>
+      <span></span>
+    </p>
+  </div>
+  <aside class="source-panel">
+    <ul id="sources-list">
+    </ul>
+  </aside>
+  <div class="compare-button-wrapper">
+    <button type="button" class="compare-button"><i class="fas fa-code-compare" aria-hidden="true"></i> Compare to Different Disease</button>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="page-jump">
+    <i class="fas fa-arrow-down" aria-hidden="true"></i>
+    <ul class="jump-list">
+      <li>Jump to:</li>
+      <li><a href="#description-section">Description |</a></li>
+      <li><a href="#age-of-onset-section">Age of Onset |</a></li>
+      <li><a href="#causes-section">Causes |</a></li>
+      <li><a href="#symptoms-section">Symptoms |</a></li>
+      <li><a href="#treatments-section">Treatments |</a></li>
+      <li><a href="#diagnosis-section">Diagnosis</a></li>
+    </ul>
+  </div>
+  <!-- DESCRIPTION -->
+  <div class="description" id="description-section">
+    <h2 class="section-heading"><i class="fas fa-book-open" aria-hidden="true"></i><strong>Description</strong></h2>
+    <p id="disease-description">Loading...</p>
+  </div>
+
+  <!-- AGE OF ONSET -->
+  <div class="aoo" id="age-of-onset-section">
+    <h3 class="age-heading"><i class="fas fa-calendar-days" aria-hidden="true"></i><strong>Age of Onset:</strong></h3>
+    <p style="display: inline;" id="disease-aoo">Loading...</p>
+  </div>
+
+  <!-- CAUSES -->
+  <div class="causes-section" id="causes-section">
+    <h2 class="section-heading"><i class="fas fa-circle-exclamation" aria-hidden="true"></i><strong>Causes</strong></h2>
+    <p class="section-overview" id="causes-overview" hidden></p>
+    <ul id="causes-list">
+      <li>Loading...</li>
+    </ul>
+  </div>
+
+  <!-- SYMPTOMS -->
+  <div class="symptoms-section" id="symptoms-section">
+    <h2 class="section-heading"><i class="fas fa-heart-pulse" aria-hidden="true"></i><strong>Symptoms</strong></h2>
+    <p class="section-overview" id="symptoms-overview" hidden></p>
+    <ul id="symptoms-list">
+      <li>Loading...</li>
+    </ul>
+  </div>
+
+  <!-- TREATMENTS -->
+  <div class="treatments-section" id="treatments-section">
+    <h2 class="section-heading"><i class="fas fa-hand-holding-medical" aria-hidden="true"></i><strong>Treatments</strong></h2>
+    <p class="section-overview" id="treatments-overview" hidden></p>
+    <div id="treatments-content">Loading...</div>
+  </div>
+
+  <!-- DIAGNOSIS -->
+  <div class="diagnosis-section" id="diagnosis-section">
+    <h2 class="section-heading"><i class="fas fa-stethoscope" aria-hidden="true"></i><strong>Diagnosis</strong></h2>
+    <p class="section-overview" id="diagnosis-overview" hidden></p>
+    <ul id="diagnosis-list">
+      <li>Loading...</li>
+    </ul>
+  </div>
+</div>
+
+<script src="../data.js"></script>
+<script src="info-script.js"></script>
+
+</body>
+</html>

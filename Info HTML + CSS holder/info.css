@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.disclaimer {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+}
+
+.disclaimer p {
+  color: black;
+  margin: 0;
+  font-size: inherit;
+  line-height: 1.45;
+}
+
+h1, h2, h3 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 65px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  grid-template-rows: auto auto auto;
+  column-gap: 20px;
+  row-gap: 4px;
+  align-items: start;
+  background-color: #d79292;
+  padding: 15px;
+  padding-left: 20px;
+  text-align: left;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.back-button {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.header {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  line-height: 1.12;
+}
+
+.global-cases {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: black;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.global-cases[hidden] {
+  display: none;
+}
+
+.global-cases i {
+  font-size: 22px;
+}
+
+.source-panel {
+  grid-column: 2;
+  grid-row: 3;
+  min-width: 0;
+  justify-self: end;
+  margin-top: 10px;
+  text-align: right;
+  
+}
+
+
+
+.source-panel ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.source-panel li {
+  border-radius: 10px;
+  background-color: #ff5757;
+}
+
+.source-panel li:nth-child(3n + 2) {
+  background-color: #f04444;
+}
+
+.source-panel li:nth-child(3n) {
+  background-color: #ff7070;
+}
+
+
+.source-panel a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: black;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+  font-size: 17px;
+  transition: transform .2s ease;
+}
+
+.source-panel a:hover {
+  transform: translateY(2px);
+}
+
+.citation-icon {
+  flex: 0 0 auto;
+  color: black;
+  font-size: 17px;
+}
+
+
+
+
+.top h1 {
+    color: white;
+}
+
+.top h3 {
+    color: black;
+}
+
+.header h3 {
+  margin-bottom: 0;
+}
+
+.back-button a {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 15px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.back-button a:hover {
+  text-decoration: underline;
+}
+
+.compare-button-wrapper {
+  grid-column: 1;
+  grid-row: 3;
+    width: fit-content;
+    margin-top: 8px;
+}
+
+.compare-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font: inherit;
+    font-size: 18px;
+    border: 2px solid black;
+    transition: background-color .2s ease, transform .2s ease;
+}
+
+.compare-button:hover {
+
+  transform: translateY(-1px);
+}
+
+.container {
+  position: relative;
+  padding: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 40px;
+}
+
+.page-jump{
+  position: relative;
+  top: 10px;
+  z-index: 2;
+  padding: 10px;
+  border:#d79292 2px solid;
+  border-right: 4px solid #d79292;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: flex-start;
+  max-width: 100%;
+  transition: transform .2s ease;
+
+}
+
+.page-jump i{
+  margin-right: 5px;
+  font-size: 15px;
+  align-self: center;
+}
+
+.page-jump ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.page-jump a {
+  display: inline-block;
+  scroll-margin-top: 16px;
+}
+
+.page-jump li:nth-child(1){
+  margin-right: 5px;
+  font-size: 15px;
+  display: inline-block;
+  transform: translateY(2px);
+}
+
+.description,
+.aoo,
+.causes-section,
+.symptoms-section,
+.treatments-section,
+.diagnosis-section {
+  scroll-margin-top: 16px;
+}
+
+.page-jump a
+{
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.page-jump a:hover{
+  transform: translateY(-1px);
+  
+}
+
+.description {
+    margin-top: 25px;
+    max-width: 90vw;
+    width: 100%;
+    text-align: left;
+    background-color: #f1f2f2;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+.description h2 {
+    color: black;
+}
+
+.section-heading,
+.age-heading,
+.treatment-subheading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-heading i,
+.age-heading i,
+.treatment-subheading i {
+  flex: 0 0 1.1em;
+  width: 1.1em;
+  color: #ff5757;
+  text-align: center;
+}
+
+.section-heading strong,
+.age-heading strong {
+  font-weight: 700;
+}
+
+.description p {
+    line-height: 1.6;
+  font-size: 17px;
+}
+
+.aoo {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0 12px;
+    text-align: left;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.age-heading {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  margin: 0 0 6px;
+}
+
+.aoo p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Sections for Causes, Symptoms, Treatments, Diagnosis */
+.causes-section, .symptoms-section, .treatments-section, .diagnosis-section {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: 2px solid black;
+  max-width: 90vw;
+}
+
+.category-nerve .description,
+.category-nerve .causes-section,
+.category-nerve .symptoms-section,
+.category-nerve .treatments-section,
+.category-nerve .diagnosis-section {
+  border-right: 8px solid orange;
+}
+
+.category-junction .description,
+.category-junction .causes-section,
+.category-junction .symptoms-section,
+.category-junction .treatments-section,
+.category-junction .diagnosis-section {
+  border-right: 8px solid purple;
+}
+
+.category-neuron .description,
+.category-neuron .causes-section,
+.category-neuron .symptoms-section,
+.category-neuron .treatments-section,
+.category-neuron .diagnosis-section {
+  border-right: 8px solid green;
+}
+
+.category-muscle .description,
+.category-muscle .causes-section,
+.category-muscle .symptoms-section,
+.category-muscle .treatments-section,
+.category-muscle .diagnosis-section {
+  border-right: 8px solid blue;
+}
+
+.causes-section h2, .symptoms-section h2, .treatments-section h2, .diagnosis-section h2 {
+  color: black;
+}
+
+.section-overview {
+  margin: 0 0 12px;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+.section-overview[hidden] {
+  display: none;
+}
+
+.causes-section ul, .symptoms-section ul, .treatments-section ul, .diagnosis-section ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.causes-section li, .symptoms-section li, .treatments-section li, .diagnosis-section li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+.treatments-section h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: black;
+  font-size: 20px;
+}
+
+.treatment-subheading i {
+  font-size: 17px;
+}
+
+.treatments-section h3:first-child {
+  margin-top: 0;
+}
+
+.treatments-section ul {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .top {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .back-button,
+  .header,
+  .source-panel,
+  .compare-button-wrapper {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .source-panel {
+    justify-self: start;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .source-panel ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .container {
+    padding-left: 15px;
+  }
+
+  .description, .causes-section, .symptoms-section, .treatments-section, .diagnosis-section {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .source-panel a,
+  .compare-button,
+  .disclaimer {
+    font-size: 17px;
+  }
+
+  .compare-button-wrapper {
+    width: fit-content;
+  }
+
+  .compare-button {
+    max-width: 100%;
+    font-size: 17px;
+  }
+
+  .global-cases {
+    font-size: 18px;
+  
+  }
+
+  .page-jump {
+    display: none;
+  }
+}

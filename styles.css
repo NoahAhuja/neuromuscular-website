@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 65px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.disclaimer{
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid black;
+
+}
+
+.top{
+  background-color: #d79292;
+  padding: 10px;
+  padding-left: 20px;
+  text-align: left;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.top p{
+  color: white;
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+
+.header p{
+  margin-top: 20px;
+  color: black;
+  font-size: 20px;
+}
+
+.header h1{
+  margin-top: 15px;
+}
+
+.search-wrapper {
+  position: relative;
+  width: min(100%, 350px);
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.search-icon{
+  position: absolute;
+  left: 14px;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.clear-icon{
+  cursor: pointer;
+  right: 14px;
+  position: absolute;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 14px;
+  padding: 6px;
+}
+
+.clear-icon[hidden] {
+  display: none;
+}
+
+.search-container {
+  padding-left: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-height: 100px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 12px 40px 12px 40px;
+  font-size: 20px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  outline: none;
+  transition: border-radius .3s ease, box-shadow .2s ease;
+}
+
+.search-bar:focus {
+  border-radius: 12px;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+.no-results {
+  margin: 24px 15px;
+  font-size: 18px;
+}
+
+.colorKey{
+display: flex;
+direction: row;
+flex-wrap: flex;
+gap: 25px;
+width: fit-content;
+padding: 15px;
+border: 1px solid black;
+
+border-radius: 15px;
+}
+
+.dot{
+  width: 10px;
+  height: 10px;
+  
+}
+
+.item{
+   display: flex;
+   gap: 10px;
+   direction: row;
+   align-items: center;
+}
+
+.item:nth-child(1) .dot {
+  background-color: blue;
+}
+
+.item:nth-child(2) .dot {
+  background-color:orange;
+}
+
+.item:nth-child(3) .dot {
+  background-color: green;
+}
+
+.item:nth-child(4) .dot {
+  background-color: purple;
+}
+
+.container {
+  position: relative;
+  padding: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 40px;
+}
+
+.wrapper-disease-box1{
+  background-color: white;
+  position: relative;
+  margin-top: 25px;
+  width: 90%;
+  text-align: left;
+}
+
+.disease-box1{
+  background-color: #f1f2f2;
+  border-radius: 10px 10px 0px 0px;
+  padding: 25px;
+  text-align: left;
+  min-height: 150px;
+  width: 100%;
+  border-right: 8px solid #ccc;
+  overflow: hidden;
+}
+
+@media (max-width: 768px){
+  .disease-box1 {
+    padding: 15px;
+    min-height: auto;  
+  }
+
+  .disease-box1 p {
+    font-size: 14px;  
+  }
+
+  .quick-facts .title-facts {
+    font-size: 14px;
+  }
+}
+
+
+
+.disease-box1 h2{
+  color: black;
+}
+
+.title-facts {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.quick-facts{
+  display: flex;
+  direction: row;
+  gap: 15px;
+}
+
+.disease-box1 p{
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: fit-content;
+
+}
+
+.button-wrapper{
+  position: relative;
+  background-color: #ff5757;
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  width: 100%;
+}
+
+.button-wrapper a{
+  flex: 1;
+}
+
+.button-wrapper button{
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.button-wrapper button:hover{
+  transform: scale(1.1);
+}
+
+.line{
+  background-color: white;
+  height: 20px;
+  width: 3px;
+  margin-top: 0px !important;
+}
+
+.button-wrapper button i {
+  color: black;
+}
+
+
+.nerve .disease-box1 {
+  border-right-color: orange;
+}
+
+.junction .disease-box1 {
+  border-right-color: purple;
+}
+
+.neuron .disease-box1 {
+  border-right-color: green;
+}
+
+.muscle .disease-box1 {
+  border-right-color: blue;
+}

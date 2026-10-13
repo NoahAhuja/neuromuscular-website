@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+}
+
+.disclaimer {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid black;
+}
+
+.disclaimer p {
+  color: black;
+  margin: 0;
+  font-size: inherit;
+  line-height: 1.45;
+}
+
+h1, h2, h3 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+.top {
+  background-color: #d79292;
+  padding: 15px;
+  padding-left: 20px;
+  text-align: left;
+  padding-bottom: 24px;
+  width: 100%;
+}
+
+.top h1 {
+    color: white;
+}
+
+.top h3 {
+    color: black;
+}
+
+.back-button a {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 15px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.back-button a:hover {
+  text-decoration: underline;
+}
+
+.container{
+  max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px 24px;
+}
+.selectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 20px 18px;
+}
+
+.selectors label {
+  display: grid;
+  gap: 6px;
+  min-width: min(100%, 240px);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.selectors select {
+  appearance: none;
+  min-height: 42px;
+  padding: 8px 44px 8px 10px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23171717' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  color: #171717;
+  font: inherit;
+}
+
+.selectors select option{
+    background-color: white;
+}
+
+.source-warning {
+  margin: 0 20px 10px;
+  font-size: 14px;
+  color: #555;
+}
+.compare-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 22px;
+  padding: 22px;
+}
+
+.box1, .box2, .box3 {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 22px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  min-height: 300px;
+}
+
+.box2{
+    background-color:#d79292;
+}
+
+.box2 h3{
+    color: white;
+}
+
+.box1 h3, .box3 h3{
+    color: #ff5757;
+}
+
+.line{
+    background-color: white;
+    height: 2px;
+}
+
+.disease-section, .similarity-section{
+    margin-top: 20px;
+    background-color:#d79292;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.box3 .disease-section {
+  background-color: #e4a4a4;
+}
+
+.disease-section h4, .similarity-section h4 {
+    font-size: 18px;
+    text-decoration: underline;
+    margin-bottom: 8px;
+}
+
+.disease-section ul, .similarity-section ul{
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.disease-section li, .similarity-section li {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.similarity-section {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.similarity-section h4 {
+  text-decoration: none;
+}
+
+.entry-disclosure > summary,
+.similarity-disclosure > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.entry-disclosure > summary::-webkit-details-marker,
+.similarity-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+
+.entry-disclosure > summary::marker,
+.similarity-disclosure > summary::marker {
+  content: '';
+}
+
+.disclosure-label {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.disclosure-arrow {
+  flex: 0 0 auto;
+  color: #ff5757;
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px;
+  transition: transform .15s ease;
+}
+
+.entry-disclosure[open] > summary .disclosure-arrow,
+.similarity-disclosure[open] > summary .disclosure-arrow {
+  transform: rotate(90deg);
+}
+
+.entry-disclosure > summary:focus-visible,
+.similarity-disclosure > summary:focus-visible {
+  outline: 2px solid #ff5757;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.disclosure-body {
+  min-width: 0;
+}
+
+.entry-disclosure .disclosure-body {
+  padding: 6px 28px 4px 0;
+  font-size: 15px;
+  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.45);
+  padding: 6px 11px;
+  margin-top: 4px;
+    border-left: 3px solid #ff5757;
+
+}
+
+.similarity-explanation {
+  margin: 8px 0 4px 20px;
+  padding: 9px 11px;
+  border-left: 3px solid #ff5757;
+  background: rgba(255, 255, 255, 0.45);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.similarity-explanation p + p {
+  margin-top: 8px;
+}
+
+.related-entry-explanation + .related-entry-explanation,
+.comparison-tag-note {
+  margin-top: 10px;
+}
+
+.related-match-label {
+  color: #423f3f;
+}
+
+.empty-state {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.disease-link {
+  color: white;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.box1 .disease-link, .box3 .disease-link {
+  color: #171717;
+}
+
+.disease-link:hover, .disease-link:focus-visible {
+  color: #241717;
+}
+
+@media (max-width: 800px) {
+  .compare-wrapper {
+    flex-direction: column;
+    gap: 14px;
+    padding: 8px;
+  }
+
+  .box1, .box2, .box3 {
+    flex: auto;
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .selectors {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top h1 {
+    font-size: 30px;
+  }
+
+  .container {
+    padding: 16px 12px;
+  }
+
+  .selectors label {
+    width: 100%;
+  }
+
+  .box1, .box2, .box3 {
+    padding: 16px;
+  }
+}
+

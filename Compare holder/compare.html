@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Neuromuscular Disease Compare</title>
+    <link rel="stylesheet" href="compare.css">
+</head>
+
+<body>
+<div class="disclaimer">
+    <p><strong>Disclaimer:</strong> This website is intended for educational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+</div>
+<div class="top">
+    <div class="back-button">
+        <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
+    </div>
+    <h1>Compare diseases</h1>
+    <h2 id="comparison-title" aria-live="polite">Choose two diseases</h2>
+</div>
+
+<div class="container">
+    <div class="selectors">
+        <label for="first-disease">First disease
+            <select id="first-disease"></select>
+        </label>
+        <label for="second-disease">Compare with
+            <select id="second-disease"></select>
+        </label>
+    </div>
+     <div class="source-warning"><p>*All sources listed in the disease information sections.</p></div>
+    <div class="compare-wrapper">
+        <div class="box1">
+           <h3 id="first-title"></h3>
+           <div class="line"></div>
+           <div id="first-details" class="disease-details"></div>
+        </div>
+        <div class="box2">
+           <h3>Similarities</h3>
+           <div class="line"></div>
+           <div id="similarities" class="similarity-details" aria-live="polite"></div>
+        </div>
+        <div class="box3">
+         <h3 id="second-title"></h3>
+         <div class="line"></div>
+         <div id="second-details" class="disease-details"></div>
+        </div>
+    </div>
+</div>
+
+<script src="../data.js"></script>
+<script src="compare-script.js"></script>
+</body>

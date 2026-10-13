@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+  
+  <title>Neuromuscular Disease Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="disclaimer">
+    <p><strong>Disclaimer:</strong> This website is intended for educational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. </p>
+  </div>
+  <div class="top">
+    <header class="header">
+      <h1>Neuromuscular Disease Explorer</h1>
+      <p>Neuromuscular diseases are conditions that disrupt the function of nerves, muscles, and the communication between them, affecting the strength and stability of muscles. There are numerous conditions that are often hard to see and differentiate. This website aims to provide a comprehensive overview of these conditions, and a simple method to compare them.</p>
+    </header>
+
+    <div class="search-container">
+      <div class="search-wrapper">
+        <i class="fas fa-search search-icon"></i>
+        <input
+          type="text" 
+          id="searchInput" 
+          class="search-bar" 
+          placeholder="Search diseases..."
+          aria-label="Search diseases"
+        >
+        <button type="button" class="clear-icon" aria-label="Clear search" hidden>
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+
+    <!-- COLOR KEY -->
+    <div class="colorKey">
+      <div class="item">
+        <div class="dot" style="background-color: blue;"></div>
+        <span>Muscle</span>
+      </div>
+
+      <div class="item">
+        <div class="dot" style="background-color: orange;"></div>
+        <span>Peripheral Nerve</span>
+      </div>
+
+      <div class="item">
+        <div class="dot" style="background-color: green;"></div>
+        <span>Motor-Neuron</span>
+      </div>
+
+      <div class="item">
+        <div class="dot" style="background-color: purple;"></div>
+        <span>Muscle-Nerve Junction</span>
+      </div>
+    </div>
+
+    <!-- DISEASES WILL BE GENERATED HERE BY JAVASCRIPT -->
+    <div id="diseaseContainer"></div>
+
+  </div>
+
+  <!-- Load your data first, then your script -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
