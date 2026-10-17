@@ -2,7 +2,7 @@
 function generateDiseaseBoxes() {
   const container = document.getElementById('diseaseContainer');
   
-  diseases.forEach(disease => {
+  diseases.forEach((disease, index) => {
     const boxHTML = `
       <div class="wrapper-disease-box1 ${disease.category.toLowerCase()}">
         <div class="disease-box1">
@@ -13,7 +13,8 @@ function generateDiseaseBoxes() {
               <p><i class="fas fa-dna"></i> ${disease.facts[1]}</p>
             </div>
           </div>
-          <p>${disease.description}</p>
+          <button type="button" class="read-more-toggle" aria-expanded="false" aria-controls="disease-description-${index}">Read more</button>
+          <p class="disease-description" id="disease-description-${index}">${disease.description}</p>
         </div>
 
         <div class="button-wrapper">
@@ -42,6 +43,15 @@ function generateDiseaseBoxes() {
 generateDiseaseBoxes();
 
 document.getElementById('diseaseContainer').addEventListener('click', event => {
+  const readMoreButton = event.target.closest('.read-more-toggle');
+  if (readMoreButton) {
+    const card = readMoreButton.closest('.wrapper-disease-box1');
+    const expanded = card.classList.toggle('description-expanded');
+    readMoreButton.setAttribute('aria-expanded', String(expanded));
+    readMoreButton.textContent = expanded ? 'Read less' : 'Read more';
+    return;
+  }
+
   const compareButton = event.target.closest('.compare-btn');
   if (!compareButton) return;
 

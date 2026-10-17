@@ -187,13 +187,61 @@ border-radius: 15px;
   overflow: hidden;
 }
 
+.read-more-toggle {
+  display: none;
+}
+
 @media (max-width: 768px){
+  h1 {
+    font-size: 36px;
+  }
+
+  .colorKey {
+    width: fit-content;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  .wrapper-disease-box1 {
+    width: 100%;
+  }
+
   .disease-box1 {
     padding: 15px;
     min-height: auto;  
   }
 
-  .disease-box1 p {
+  .disease-box1 .quick-facts {
+    display: none;
+  }
+
+  .disease-box1 .disease-description {
+    display: none;
+  }
+
+  .wrapper-disease-box1.description-expanded .disease-description {
+    display: block;
+  }
+
+  .read-more-toggle {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 8px 0;
+    border: 0;
+    background: transparent;
+    color: #a92727;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .disease-box1 .disease-description {
     font-size: 14px;  
   }
 
